@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome back,"
+        android:textColor="@color/text_dark"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <GridLayout
+        android:id="@+id/grid_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        android:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_status_connection"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/status_card_blue_bg"
+            android:drawableStart="@drawable/ic_wifi"
+            android:drawablePadding="8dp"
+            android:padding="16dp"
+            android:text="Terhubung"
+            android:textColor="@color/status_blue_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status_battery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/status_card_blue_bg"
+            android:drawableStart="@drawable/ic_battery"
+            android:drawablePadding="8dp"
+            android:padding="16dp"
+            android:text="Baterai: 92%"
+            android:textColor="@color/status_blue_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/status_card_yellow_bg"
+            android:drawableStart="@drawable/ic_thermostat"
+            android:drawablePadding="8dp"
+            android:padding="16dp"
+            android:text="Suhu: 28°C"
+            android:textColor="@color/status_yellow_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status_humidity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:background="@drawable/status_card_blue_bg"
+            android:drawableStart="@drawable/ic_water_drop"
+            android:drawablePadding="8dp"
+            android:padding="16dp"
+            android:text="Lembap: 65%"
+            android:textColor="@color/status_blue_text"
+            android:textStyle="bold" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tv_cta_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready to improve your English?"
+        android:textColor="@color/text_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_cta_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cta_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Let's get started"
+        android:textColor="@color/text_light"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_session"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_start_session"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_black_bg"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:text="Star New Study Session"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

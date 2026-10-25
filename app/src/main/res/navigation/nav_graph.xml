@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.robaap.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_missionSelectionFragment"
+            app:destination="@id/missionSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/controlFragment"
+        android:name="com.example.robaap.ControlFragment"
+        android:label="fragment_control"
+        tools:layout="@layout/fragment_control" >
+        <action
+            android:id="@+id/action_controlFragment_to_imageSelectionFragment"
+            app:destination="@id/imageSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.robaap.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/missionSelectionFragment"
+        android:name="com.example.robaap.MissionSelectionFragment"
+        android:label="fragment_mission_selection"
+        tools:layout="@layout/fragment_mission_selection" >
+        <action
+            android:id="@+id/action_missionSelectionFragment_to_controlFragment"
+            app:destination="@id/controlFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageSelectionFragment"
+        android:name="com.example.robaap.ImageSelectionFragment"
+        android:label="fragment_image_selection"
+        tools:layout="@layout/fragment_image_selection" >
+        <action
+            android:id="@+id/action_imageSelectionFragment_to_analysisFragment"
+            app:destination="@id/analysisFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisFragment"
+        android:name="com.example.robaap.AnalysisFragment"
+        android:label="fragment_analysis"
+        tools:layout="@layout/fragment_analysis" >
+        <action
+            android:id="@+id/action_analysisFragment_to_essayEditorFragment"
+            app:destination="@id/essayEditorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/essayEditorFragment"
+        android:name="com.example.robaap.EssayEditorFragment"
+        android:label="fragment_essay_editor"
+        tools:layout="@layout/fragment_essay_editor" >
+        <action
+            android:id="@+id/action_essayEditorFragment_to_grammarCheckFragment"
+            app:destination="@id/grammarCheckFragment" />
+        <action
+            android:id="@+id/action_essayEditorFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_essayEditorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/grammarCheckFragment"
+        android:name="com.example.robaap.GrammarCheckFragment"
+        android:label="GrammarCheckFragment" />
+
+</navigation>

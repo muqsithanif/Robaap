@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="status_blue_bg">#E6EFFF</color>
+    <color name="status_blue_text">#4475F1</color>
+    <color name="status_yellow_bg">#FFF8E0</color>
+    <color name="status_yellow_text">#F2A50C</color>
+    <color name="text_dark">#212121</color>
+    <color name="text_light">#757575</color>
+    <color name="mission_blue">#4285F4</color>
+    <color name="mission_purple">#9C27B0</color>
+    <color name="mission_green">#25D366</color>
+</resources>
